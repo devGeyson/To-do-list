@@ -29,7 +29,9 @@ function newTask() {
 
 function showValues() {
   let values = JSON.parse(localStorage.getItem(localStorageKey)) || "[]";
+  console.log('teste 1' + values);
   let list = document.getElementById("to-do-list");
+  console.log('teste 2' + values);
   list.innerHTML = "";
   for (let i = 0; i < values.length; i++) {
     list.innerHTML += `<li>${values[i]["name"]}<button id='btn-ok' onclick='removeItem("${values[i]["name"]}")'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
